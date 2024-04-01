@@ -1,0 +1,40 @@
+image:
+  repository: docker.io/jauderho/yt-dlp
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  main:
+    enabled: false
+    ports:
+      main:
+        enabled: false
+
+cronjobs:
+  - name: "help"
+    command: "--help"
+    schedule: "0 0 * * *"
+
+cronjob:
+  annotations: {}
+  failedJobsHistoryLimit: 5
+  successfulJobsHistoryLimit: 2
+
+# workload:
+#   main:
+#     podSpec:
+#       containers:
+#         main:
+#           tty: true
+#           stdin: true
+#           probes:
+#             liveness:
+#               enabled: false
+#             readiness:
+#               enabled: false
+#             startup:
+#               enabled: false
+
+portal:
+  open:
+    enabled: false

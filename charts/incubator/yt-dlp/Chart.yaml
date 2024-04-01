@@ -1,0 +1,40 @@
+annotations:
+  max_scale_version: 24.04.0
+  min_scale_version: 23.10.0
+  truecharts.org/SCALE-support: "true"
+  truecharts.org/category: media
+  truecharts.org/max_helm_version: "3.14"
+  truecharts.org/min_helm_version: "3.11"
+  truecharts.org/train: incubator
+apiVersion: v2
+appVersion: latest
+dependencies:
+  - name: common
+    version: 17.2.31
+    repository: oci://tccr.io/truecharts
+    condition: ""
+    alias: ""
+    tags: []
+    import-values: []
+deprecated: false
+description: yt-dlp is a command line application for downloading videos from youtube.com and other video platforms. It is a youtube-dl fork based on the now inactive youtube-dlc.
+home: https://truecharts.org/charts/incubator/yt-dlp
+icon: https://truecharts.org/img/hotlink-ok/chart-icons/yt-dlp.png
+keywords:
+  - yt-dlp
+  - youtube-dl
+  - youtube-dlc
+  - youtube-downloader
+  - video-downloader
+kubeVersion: ">=1.24.0-0"
+maintainers:
+  - name: TrueCharts
+    email: info@truecharts.org
+    url: https://truecharts.org
+name: yt-dlp
+sources:
+  - https://github.com/yt-dlp/yt-dlp
+  - https://github.com/truecharts/charts/tree/master/charts/incubator/yt-dlp
+  - https://github.com/jauderho/dockerfiles/tree/main/yt-dlp
+type: application
+version: 0.0.1
